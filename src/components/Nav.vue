@@ -13,7 +13,7 @@
         <div class="ml-80 mt-2" v-if="showPages">
             <div class="ml-8 text-xl font-serif">
 
-<div>Home</div>
+<router-link to="/">Home</router-link>
 <div>About</div>
             </div>
     </div>

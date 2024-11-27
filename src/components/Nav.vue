@@ -1,5 +1,5 @@
 <template>
-  <nav class="">
+  <nav class="fixed w-full top-0 ">
     <div class="flex justify-between shadow-md pt-3 pb-3 px-5 bg-green-100  font-bold">
 <div class="text-2xl font-serif">simpleThoughts</div>
 <div class="">

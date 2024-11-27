@@ -10,7 +10,7 @@
 
 </div>
     </div>
-        <div class="ml-80 mt-2" v-if="showPages">
+        <div class="ml-80 mt-2 mr-10" v-if="showPages">
             <div class="ml-8 text-xl font-serif">
 
 <router-link to="/">Home</router-link>

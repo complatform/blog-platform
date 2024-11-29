@@ -24,7 +24,17 @@
     <div>
       <button class="ml-24 mt-3 bg-green-200 px-10 py-2 text-xl font-serif shadow-md rounded-sm" @click="postToughts">Post</button>
     </div>
+    <!-- <div>
+      <button class="ml-24 mt-3 bg-green-200 px-10 py-2 text-xl font-serif shadow-md rounded-sm" @click="updateBlog">update</button>
+    </div> -->
   </div>
+  <!-- <div v-for="blog in blogs" :key="blog">
+
+<img :src="blog.photo" alt="">
+<p>{{blog.name}}</p>
+<p>{{blog.title}}</p>
+<button @click="editBlog(blog.id)">Update</button>
+  </div> -->
 </template>
 
 <script>
@@ -70,14 +80,38 @@ export default {
         reader.readAsDataURL(file);
       }
     },
+      
     saveBlogs() {
       localStorage.setItem('blogs', JSON.stringify(this.blogs));
     },
     resetForm() {
       this.posts.name = '';
       this.posts.date = null;
+      this.posts.title = '';
       this.posts.tought = '';
       this.posts.photo = '';
+    },
+      updateBlog() {
+      if (this.blogID) {
+        const taskIndex = this.blogs.findIndex(blog => blog.id === this.blogID);
+        if (taskIndex !== -1) {
+          this.blogs[taskIndex] = { ...this.posts, id: this.blogID }; 
+          this.saveBlogs(); 
+          this.resetForm();
+        }
+      }
+    },
+     editBlog(id) {
+      const blogToEdit = this.blogs.find(blog => blog.id === id);
+      if (blogToEdit) {
+        this.posts.name = blogToEdit.name;
+        this.posts.date = blogToEdit.date;
+        this.posts.title = blogToEdit.title;
+        this.posts.photo = blogToEdit.photo;
+        this.posts.tought = blogToEdit.tought;
+        this.blogID = id; 
+     
+      }
     },
   },
   components: { Nav },

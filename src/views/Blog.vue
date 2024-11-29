@@ -11,7 +11,7 @@
        
   
       <div class="container flex space-x-5" ref="scrollContainer">
-        <div class="bg-white ml-1  rounded-md shadow-md  pb-5    mb-5 flex flex-col" v-for="blog in blogs" :key="blog.id">
+        <div class="bg-white ml-5  rounded-md shadow-md  pb-5 w-fit    mb-5 flex flex-col" v-for="blog in blogs" :key="blog.id">
           <div class="flex">
             <div class="flex-1"> 
               <img :src="blog.photo" alt="" class="rounded-md h-60">
@@ -35,7 +35,7 @@
       </div>
     
     </div>
-    <div class="flex ml-40">
+    <div class="flex ml-40 mb-20">
 
        <div class=" text-xl bg-green-300 rounded-full h-8 mr-5" ref="backBtn">
         <i class="fa-solid fa-backward back  ml-1  mr-2" ></i>

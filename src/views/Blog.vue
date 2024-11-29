@@ -9,11 +9,9 @@
     <h1 class="text-2xl text-center text-gray-400 font-bold mt-5 mb-5">Trending Posts</h1>
     <div class="flex overflow-x-auto space-x-5">
        
-     <div class="mt-40 text-lg bg-green-300 rounded-full h-7" ref="backBtn">
-        <i class="fa-solid fa-backward back  ml-1 mt-2 mr-2" ></i>
-      </div>
+  
       <div class="container flex space-x-5" ref="scrollContainer">
-        <div class="bg-white rounded-md shadow-md  pb-5 w-full   mb-5 flex flex-col" v-for="blog in blogs" :key="blog.id">
+        <div class="bg-white ml-1  rounded-md shadow-md  pb-5    mb-5 flex flex-col" v-for="blog in blogs" :key="blog.id">
           <div class="flex">
             <div class="flex-1"> 
               <img :src="blog.photo" alt="" class="rounded-md h-60">
@@ -28,15 +26,22 @@
                 </div>
               </div>
               <div class="flex justify-between ml-5 mr-5 mt-2">
-                <button class="bg-green-200 hover:bg-green-300 hover:shadow-lg px-3 py-2 mt-5 rounded-sm shadow-md font-serif font-bold text-lg" @click="editBlog(blog.id)">Update Post</button>
+                <button class="bg-green-200 hover:bg-green-300 hover:shadow-lg px-3 py-2 mt-5 rounded-sm shadow-md font-serif font-bold text-lg mr-2" @click="editBlog(blog.id)">Update Post</button>
                 <button class="bg-red-400 hover:bg-red-500 hover:shadow-lg px-3 py-2 mt-5 rounded-sm shadow-md font-serif font-bold text-lg" @click="deletePosts(blog.id)">Delete Post</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-       <div  ref="nextBtn" class="mt-40 text-lg pr-1 bg-green-300 rounded-full h-7">
-        <i class="fa-solid fa-forward next ml-2 mt-2" ></i>
+    
+    </div>
+    <div class="flex ml-40">
+
+       <div class=" text-xl bg-green-300 rounded-full h-8 mr-5" ref="backBtn">
+        <i class="fa-solid fa-backward back  ml-1  mr-2" ></i>
+      </div>
+         <div  ref="nextBtn" class=" text-xl pr-1 bg-green-300 rounded-full h-8">
+        <i class="fa-solid fa-forward next ml-2 " ></i>
       </div>
     </div>
   </div>

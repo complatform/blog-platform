@@ -1,8 +1,8 @@
 <template>
   <Nav />
-  <div class="shadow-md mt-16 ml-5 mr-5 pl-5 pr-5 pt-5 pb-5 rounded-sm">
+  <div class="shadow-md mt-16 ml-5 mr-5 pl-5 pr-5 pt-5 pb-5 rounded-sm md:ml-40 md:mt-20 md:mb-20">
     <div class="text-xl font-serif mb-5">
-      <label for="">Enter Your Name:</label>
+      <label for="">Enter Your Name:</label><br>
       <input type="text" placeholder="Enter Your Name" class="shadow-md px-7 mt-2 mb-2 focus:outline-blue-300 py-3 rounded-md" v-model="posts.name">
     </div>
     <div class="text-xl font-serif mb-5">
@@ -14,14 +14,14 @@
       <input type="text" placeholder="Enter Your Title" class="shadow-md px-7 mt-2 mb-2 focus:outline-blue-300 py-3 rounded-md w-72" v-model="posts.title">
     </div>
     <div class="text-xl font-serif mb-5">
-      <label for="">Enter Your Thoughts:</label>
+      <label for="">Enter Your Thoughts:</label><br>
       <textarea cols="27" rows="6" class="shadow-md px-7 mt-2 mb-2 focus:outline-blue-300 py-3 rounded-md" v-model="posts.tought"></textarea>
     </div>
     <div class="text-xl font-serif mb-5">
-      <label for="">Enter Your Photo:</label>
+      <label for="">Enter Your Photo:</label><br>
       <input type="file" class="shadow-md px-7 mt-2 mb-2 focus:outline-blue-300 py-3 rounded-md w-72" @change="handlePhoto">
     </div>
-    <div>
+    <div class="md:ml-44">
       <button class="ml-24 mt-3 bg-green-200 px-10 py-2 text-xl font-serif shadow-md rounded-sm" @click="postToughts">Post</button>
     </div>
     <!-- <div>

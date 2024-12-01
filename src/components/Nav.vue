@@ -10,12 +10,14 @@
 
 </div>
     </div>
-        <div class="ml-80 mt-2 mr-10" v-if="showPages">
-            <div class="ml-8 md:ml-80 text-xl font-serif">
-<div class="ml-36">
+        <div class="lg:ml-96 ml-44 mt-2 mr-10" v-if="showPages">
+            <div class="ml-8 md:ml-80 lg:ml-96 text-xl font-serif">
+<div class="ml-36 lg:ml-96">
+<div class="lg:ml-40">
 
 <router-link to="/">Home</router-link>
 <div>About</div>
+</div>
 </div>
             </div>
     </div>

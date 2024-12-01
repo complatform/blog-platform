@@ -34,8 +34,8 @@
         </div>
       </div>
     </div>
-     <div class="ml-16 mb-10 lg:ml-72" >
-    <div class="flex ml-40 mb-40 md:ml-96">
+     <div class="ml-16 mb-10 lg:ml-64" >
+    <div class="flex ml-28 mb-40 md:ml-72">
      
         
      

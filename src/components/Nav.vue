@@ -13,10 +13,15 @@
         <div class="lg:ml-96 ml-44 mt-2 mr-10" v-if="showPages">
             <div class="ml-8 md:ml-96 lg:ml-96 text-xl font-serif">
 <div class="ml-36 lg:ml-96">
-<div class="lg:ml-40 md:ml-16">
+<div class="lg:ml-40 md:ml-32 ">
+<div>
 
-<router-link to="/">Home</router-link>
-<div>About</div>
+<router-link >Home</router-link>
+</div>
+<div>
+
+<router-link to="/About">About</router-link>
+</div>
 </div>
 </div>
             </div>
@@ -34,6 +39,9 @@ data(){
 methods:{
     toggleShow(){
         this.showPages = !this.showPages
+    },
+    goToHome(){
+this.$router.push()
     }
 }
 }

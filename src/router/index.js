@@ -3,6 +3,7 @@ import Blog from '../views/Blog.vue'
 import Slider from '../views/Slider.vue'
 import BlogPost from '../views/BlogPost.vue'
 import detailTought from '../views/detailTought.vue'
+import About from '../views/About.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/detailTought',
     name: 'detailTought',
     component: detailTought
+  },
+  {
+    path: '/About',
+    name: 'About',
+    component: About
   },
   
   
